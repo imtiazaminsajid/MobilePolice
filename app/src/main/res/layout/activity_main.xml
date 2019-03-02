@@ -19,15 +19,17 @@
             android:layout_height="match_parent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:contentScrim="?attr/colorPrimary"
-            android:background="#999c1212"
+            app:title="Mobile Police"
+            app:titleEnabled="true"
+            app:expandedTitleGravity="top"
             android:fitsSystemWindows="true"
 
             >
             <ImageView
                 android:id="@+id/expandedImage"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:src="@drawable/police2"
+                android:layout_height="200dp"
+                android:src="@drawable/police_car"
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax"
                 app:layout_collapseParallaxMultiplier="0.7"
@@ -36,8 +38,6 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:title="App Name"
-                app:titleTextColor="#dc1616"
                 app:layout_collapseMode="pin" >
             </android.support.v7.widget.Toolbar>
         </android.support.design.widget.CollapsingToolbarLayout>
@@ -69,6 +69,7 @@
 
                     <HorizontalScrollView
                         android:layout_marginTop="10dp"
+                        android:background="#91cbef"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -82,7 +83,7 @@
                                 android:layout_width="150dp"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="5dp"
-                                android:onClick="emergencyCall">
+                                >
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -95,7 +96,7 @@
                                         android:layout_width="100dp"
                                         android:layout_height="80dp"
                                         android:src="@drawable/policebd"
-                                        android:onClick="emergencyCall"/>
+                                        android:onClick="police"/>
 
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -124,7 +125,7 @@
                                         android:layout_width="100dp"
                                         android:layout_height="80dp"
                                         android:src="@drawable/fireservicebd"
-                                        android:onClick="emergencyCall"/>
+                                        android:onClick="fireService"/>
 
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -153,12 +154,13 @@
                                         android:layout_width="100dp"
                                         android:layout_height="80dp"
                                         android:src="@drawable/rab"
-                                        android:onClick="emergencyCall"/>
+                                        android:onClick="rab"/>
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="20sp"
+                                        android:textStyle="bold"
                                         android:text="RAB"/>
 
                                 </LinearLayout>
@@ -181,11 +183,13 @@
                                         android:layout_width="100dp"
                                         android:layout_height="80dp"
                                         android:src="@drawable/airforce"
-                                        android:onClick="emergencyCall"/>
+                                        android:onClick="airForce"/>
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
                                         android:text="AIR FORCE"/>
 
                                 </LinearLayout>
@@ -208,11 +212,13 @@
                                         android:layout_width="100dp"
                                         android:layout_height="80dp"
                                         android:src="@drawable/ansarbd"
-                                        android:onClick="emergencyCall"/>
+                                        android:onClick="ansar"/>
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
                                         android:text="ANSAR"/>
 
                                 </LinearLayout>
@@ -230,7 +236,10 @@
                         android:layout_margin="10dp"
                         android:layout_marginTop="10dp"
                         android:src="@drawable/call_999"
-                        android:visibility="visible" />
+                        android:clickable="true"
+                        android:visibility="visible"
+                        android:onClick="call999"
+                        />
 
                     <!--<LinearLayout-->
                         <!--android:layout_width="match_parent"-->
@@ -304,7 +313,7 @@
 
                     <LinearLayout
                         android:layout_marginTop="10dp"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
                             android:gravity="center">
@@ -312,14 +321,16 @@
                             <ImageView
                                 android:id="@+id/submit_btn"
                                 android:layout_width="96dp"
-                                android:layout_height="96dp"
+                                android:layout_height="100dp"
                                 android:src="@drawable/police"
                                 android:scaleType="fitCenter"
-                                android:onClick="onClickActionMethod"/>
+                                android:onClick="reportToPolice"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Report To Police"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
                                 android:gravity="center"/>
 
                         </LinearLayout>

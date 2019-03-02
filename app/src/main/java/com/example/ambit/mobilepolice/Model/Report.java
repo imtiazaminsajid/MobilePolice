@@ -1,0 +1,89 @@
+package com.example.ambit.mobilepolice.Model;
+
+public class Report {
+
+    private String timeAndDate;
+    private String locationName;
+    private String complain;
+    private String imageUrl;
+    private String phoneNumber;
+    private Double lat;
+    private Double lon;
+
+    public Report() {
+    }
+
+    public Report(String timeAndDate, String locationName, String complain, String imageUrl, String phoneNumber) {
+        this.timeAndDate = timeAndDate;
+        this.locationName = locationName;
+        this.complain = complain;
+        this.imageUrl = imageUrl;
+        this.phoneNumber = phoneNumber;
+    }
+
+    public Report(String timeAndDate, String locationName, String complain, String imageUrl, String phoneNumber, Double lat, Double lon) {
+        this.timeAndDate = timeAndDate;
+        this.locationName = locationName;
+        this.complain = complain;
+        this.imageUrl = imageUrl;
+        this.phoneNumber = phoneNumber;
+        this.lat = lat;
+        this.lon = lon;
+    }
+
+    public String getTimeAndDate() {
+        return timeAndDate;
+    }
+
+    public void setTimeAndDate(String timeAndDate) {
+        this.timeAndDate = timeAndDate;
+    }
+
+    public String getLocationName() {
+        return locationName;
+    }
+
+    public void setLocationName(String locationName) {
+        this.locationName = locationName;
+    }
+
+    public String getComplain() {
+        return complain;
+    }
+
+    public void setComplain(String complain) {
+        this.complain = complain;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public Double getLat() {
+        return lat;
+    }
+
+    public void setLat(Double lat) {
+        this.lat = lat;
+    }
+
+    public Double getLon() {
+        return lon;
+    }
+
+    public void setLon(Double lon) {
+        this.lon = lon;
+    }
+}
