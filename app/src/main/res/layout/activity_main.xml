@@ -238,6 +238,7 @@
                         android:src="@drawable/call_999"
                         android:clickable="true"
                         android:visibility="visible"
+                        android:background="#bbe5ff"
                         android:onClick="call999"
                         />
 

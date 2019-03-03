@@ -309,4 +309,10 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
     protected void onStart() {
         super.onStart();
     }
+
+    public void homeButton(View view) {
+        Intent intent = new Intent(ReportToPolice.this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }
