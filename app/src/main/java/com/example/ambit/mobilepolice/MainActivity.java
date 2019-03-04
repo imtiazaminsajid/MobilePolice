@@ -138,4 +138,35 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, ReportToPolice.class);
         startActivity(intent);
     }
+
+    public void todatTraffic(View view) {
+        Intent intent = new Intent(MainActivity.this, RegistrationActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        AlertDialog.Builder builder =  new AlertDialog.Builder(this);
+
+        builder.setMessage("Do you want to Exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        MainActivity.super.onBackPressed();
+
+                    }
+                })
+                .setNegativeButton("Cencel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+
+                    }
+                })
+                .create().show();
+
+
+    }
 }

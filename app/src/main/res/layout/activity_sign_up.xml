@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFCDB"
+    tools:context=".SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#575247"
+        android:weightSum="6"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/menuSignIn"
+            android:layout_width="0dp"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home_black_24dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="50sp"
+            android:layout_weight="4"
+            android:src="@drawable/pocket"
+            android:gravity="center_horizontal"
+            />
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login for access the Report"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:fontFamily="serif"
+        android:textColor="#000"
+        android:layout_marginTop="29sp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center"
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email: "
+            android:textSize="22sp"
+            android:fontFamily="serif"
+            android:textColor="#000"
+            android:layout_gravity="center"
+
+            />
+
+        <EditText
+            android:id="@+id/signInEmail"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:hint="abcdef@gmail.com"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="#D3F591"
+            android:layout_marginLeft="43dp"
+            android:inputType="textEmailAddress"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password: "
+            android:textSize="22sp"
+            android:fontFamily="serif"
+            android:textColor="#000"
+            android:layout_gravity="center"
+
+            />
+
+        <EditText
+            android:id="@+id/signInPassword"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:hint="password"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="#D3F591"
+            android:layout_marginLeft="5dp"
+            android:inputType="numberPassword"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Sign In"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:textSize="20dp"
+        android:padding="5dp"
+        android:textColor="#000000"
+        android:background="#D3F591"
+        android:fontFamily="serif"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Not register yet? Please "
+            android:textSize="19sp"
+            android:fontFamily="serif"
+            android:textColor="#000"
+            android:layout_gravity="center"
+
+            />
+
+        <TextView
+            android:id="@+id/signinDontHaveAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register!"
+            android:textSize="20sp"
+            android:fontFamily="serif"
+            android:textColor="#0034d1"
+            android:layout_gravity="center"
+
+            />
+
+
+
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:weightSum="7"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--&gt;-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Area Based Traffic Notification"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textColor="#000"-->
+            <!--android:layout_weight="6"-->
+            <!--android:fontFamily="serif"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="See All"-->
+            <!--android:textSize="19sp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:textColor="#0afc06"-->
+            <!--/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100dp">-->
+
+        <!--<GridView-->
+            <!--android:id="@+id/gridViewForSignin"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:numColumns="3"-->
+            <!--&gt;-->
+
+
+        <!--</GridView>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="3"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--&gt;-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/TotalAlert"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Total Alert: 0"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textColor="#000"-->
+            <!--android:layout_weight="2"-->
+            <!--android:fontFamily="serif"-->
+            <!--android:layout_gravity="center"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="NearBy Map"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textColor="#000"-->
+            <!--android:layout_weight="1"-->
+            <!--android:fontFamily="serif"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:gravity="center"-->
+            <!--/>-->
+
+
+
+    <!--</LinearLayout>-->
+
+    <ProgressBar
+        android:id="@+id/signInProgressBar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

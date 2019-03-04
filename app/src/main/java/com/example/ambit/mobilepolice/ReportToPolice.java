@@ -23,6 +23,7 @@ import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -69,6 +70,8 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
     double longitude;
     double latitude;
 
+    ProgressBar progressBar;
+
 
 
     @Override
@@ -82,7 +85,7 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
         complainET = findViewById(R.id.complainET);
 
         img_chooser = findViewById(R.id.img_chooser);
-        camera_btn = findViewById(R.id.camera_btn);
+        //camera_btn = findViewById(R.id.camera_btn);
 
 
         capturePicture = findViewById(R.id.capturePicture);
@@ -96,6 +99,8 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm aaa");
         String time = format.format(calendar.getTime());
         dateAndTimeET.setText(time);
+
+        progressBar = findViewById(R.id.reportToPoliceProgressBar);
 
 
 
@@ -229,15 +234,15 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
         StorageReference reference = storageReference.child(System.currentTimeMillis()+"."+getFileExtention(imageUri));
 
 
-        //alertProgressBar.setVisibility(View.VISIBLE);
+        progressBar.setVisibility(View.VISIBLE);
 
         reference.putFile(imageUri)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                         // Get a URL to the uploaded content
-                        //alertProgressBar.setVisibility(View.GONE);
-                        Toast.makeText(getApplicationContext(), "Alert Message Updated Successfully", Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.GONE);
+                        Toast.makeText(getApplicationContext(), "Report Updated Successfully", Toast.LENGTH_SHORT).show();
 
                         Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
 

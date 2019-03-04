@@ -336,6 +336,18 @@
 
                         </LinearLayout>
 
+                    <Button
+                        android:id="@+id/todayTraffic"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15sp"
+                        android:text="See Traffic Today"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:clickable="true"
+                        android:onClick="todatTraffic"
+                        />
+
 
                 </LinearLayout>
 
