@@ -28,11 +28,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ambit.mobilepolice.Model.Report;
+import com.example.ambit.mobilepolice.Model.Users;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
@@ -55,7 +61,8 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
     StorageReference storageReference;
     StorageTask storageTask;
 
-    EditText locationNameET, phoneNumberET, complainET;
+    EditText locationNameET,complainET;
+    EditText phoneNumberET;
     Button submitToPolice;
     TextView dateAndTimeET;
 
@@ -74,6 +81,7 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,6 +94,8 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
 
         img_chooser = findViewById(R.id.img_chooser);
         //camera_btn = findViewById(R.id.camera_btn);
+
+
 
 
         capturePicture = findViewById(R.id.capturePicture);
@@ -121,6 +131,8 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
         }
         Location location = locationManager.getLastKnownLocation(locationManager.NETWORK_PROVIDER);
         onLocationChanged(location);
+
+
 
     }
 

@@ -135,12 +135,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void reportToPolice(View view) {
 
-        Intent intent = new Intent(MainActivity.this, ReportToPolice.class);
+        Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
         startActivity(intent);
     }
 
     public void todatTraffic(View view) {
-        Intent intent = new Intent(MainActivity.this, RegistrationActivity.class);
+        Intent intent = new Intent(MainActivity.this, TrafficWebview.class);
         startActivity(intent);
     }
 

@@ -107,9 +107,16 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
             return;
         }
 
-        if(phone.length()<11)
+        if(phone.isEmpty())
         {
             registrationPassword.setError("Enter a Phone");
+            registrationPassword.requestFocus();
+            return;
+        }
+
+        if(phone.length()<11)
+        {
+            registrationPassword.setError("Minimum length of a phone should be 11");
             registrationPassword.requestFocus();
             return;
         }
@@ -160,7 +167,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
 
                                 Toast.makeText(RegistrationActivity.this, "Registation Is Successfull", Toast.LENGTH_SHORT).show();
 
-                                Intent intent = new Intent(getApplicationContext(), ReportToPolice.class);
+                                Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
                             }else {
