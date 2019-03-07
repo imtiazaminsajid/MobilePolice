@@ -7,28 +7,30 @@ public class Report {
     private String complain;
     private String imageUrl;
     private String phoneNumber;
+    private String crimeType;
     private Double lat;
     private Double lon;
 
     public Report() {
     }
 
-    public Report(String timeAndDate, String locationName, String complain, String imageUrl, String phoneNumber) {
+    public Report(String timeAndDate, String locationName, String complain, String imageUrl, String phoneNumber, String crimeType, Double lat, Double lon) {
         this.timeAndDate = timeAndDate;
         this.locationName = locationName;
         this.complain = complain;
         this.imageUrl = imageUrl;
         this.phoneNumber = phoneNumber;
-    }
-
-    public Report(String timeAndDate, String locationName, String complain, String imageUrl, String phoneNumber, Double lat, Double lon) {
-        this.timeAndDate = timeAndDate;
-        this.locationName = locationName;
-        this.complain = complain;
-        this.imageUrl = imageUrl;
-        this.phoneNumber = phoneNumber;
+        this.crimeType = crimeType;
         this.lat = lat;
         this.lon = lon;
+    }
+
+    public String getCrimeType() {
+        return crimeType;
+    }
+
+    public void setCrimeType(String crimeType) {
+        this.crimeType = crimeType;
     }
 
     public String getTimeAndDate() {

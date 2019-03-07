@@ -61,7 +61,7 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
     StorageReference storageReference;
     StorageTask storageTask;
 
-    EditText locationNameET,complainET;
+    EditText locationNameET,complainET, crimeTypeET;
     EditText phoneNumberET;
     Button submitToPolice;
     TextView dateAndTimeET;
@@ -91,6 +91,7 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
         dateAndTimeET = findViewById(R.id.timeAndDateET);
         phoneNumberET = findViewById(R.id.phoneNumberET);
         complainET = findViewById(R.id.complainET);
+        crimeTypeET = findViewById(R.id.crimeTypeET);
 
         img_chooser = findViewById(R.id.img_chooser);
         //camera_btn = findViewById(R.id.camera_btn);
@@ -217,6 +218,7 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
         final String locationName =  locationNameET.getText().toString().trim();
         final String complain = complainET.getText().toString().trim();
         final String phoneNum = phoneNumberET.getText().toString().trim();
+        final String crimeType = crimeTypeET.getText().toString().trim();
         final double lat = latitude;
         final double lon = longitude;
 
@@ -234,6 +236,12 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
         if (phoneNum.isEmpty()){
             phoneNumberET.setError("Enter Number");
             phoneNumberET.requestFocus();
+            return;
+        }
+
+        if (crimeType.isEmpty()){
+            locationNameET.setError("Enter Crime Type");
+            locationNameET.requestFocus();
             return;
         }
 
@@ -262,7 +270,7 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
 
                         Uri downloadUri = uriTask.getResult();
 
-                        Report report = new Report(dateAndTime, locationName, complain, downloadUri.toString(), phoneNum, lat, lon);
+                        Report report = new Report(dateAndTime, locationName, complain, downloadUri.toString(), phoneNum, crimeType, lat, lon);
 
                         String reportID = databaseReference.push().getKey();
                         databaseReference.child(reportID).setValue(report);
