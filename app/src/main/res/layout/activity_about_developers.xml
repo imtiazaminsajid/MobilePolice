@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFCDB"
+    tools:context=".AboutDevelopers">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="About Developers"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:background="#575247"
+        android:textColor="#FFFCDB"
+        android:layout_gravity="center"
+        android:gravity="center"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:src="@drawable/imtiazaminsajid"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Imtiaz Amin"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:textColor="#575247"
+    android:layout_gravity="center"
+    android:fontFamily="monospace"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dept. of CSE"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#2945ab"
+        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manarat International University"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#2945ab"
+        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        />
+
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="5dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:background="#575247"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:src="@drawable/afifa"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Samsunnahar Afifa"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#575247"
+        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dept. of CSE"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#2945ab"
+        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manarat International University"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#2945ab"
+        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        />
+
+</LinearLayout>

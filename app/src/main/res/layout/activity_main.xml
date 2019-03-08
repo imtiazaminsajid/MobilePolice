@@ -72,7 +72,7 @@
 
                     <HorizontalScrollView
                         android:layout_marginTop="10dp"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:background="#575247"
                         android:layout_height="wrap_content">
 
@@ -251,88 +251,185 @@
                         android:onClick="call999"
                         />
 
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:gravity="center">-->
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:background="#575247"
+                        android:layout_height="wrap_content">
 
-                        <!--<android.support.v7.widget.CardView-->
-                            <!--android:layout_width="150dp"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_margin="10dp">-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
 
-                            <!--<LinearLayout-->
-                                <!--android:layout_width="match_parent"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:orientation="vertical"-->
-                                <!--android:gravity="center">-->
+                            <android.support.v7.widget.CardView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                >
 
-                                <!--<de.hdodenhof.circleimageview.CircleImageView-->
-                                    <!--android:id="@+id/img_chooser"-->
-                                    <!--android:layout_width="96dp"-->
-                                    <!--android:layout_height="96dp"-->
-                                    <!--android:src="@drawable/upload2"-->
-                                    <!--app:civ_border_width="2dp"-->
-                                    <!--app:civ_border_color="#FFFFFFFF"-->
-                                    <!--android:layout_alignParentTop="true"-->
-                                    <!--android:layout_alignParentLeft="true"-->
-                                    <!--android:onClick="onClickActionMethod"/>-->
-                                <!--<TextView-->
-                                    <!--android:layout_width="wrap_content"-->
-                                    <!--android:layout_height="wrap_content"-->
-                                    <!--android:text="Upload Evidence From Gallary"-->
-                                    <!--android:gravity="center"/>-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
 
-                            <!--</LinearLayout>-->
+                                    <ImageView
+                                        android:id="@+id/dmc"
+                                        android:layout_width="100dp"
+                                        android:layout_height="80dp"
+                                        android:src="@drawable/dmc"
+                                        android:onClick="dmc"/>
 
-                        <!--</android.support.v7.widget.CardView>-->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="DMC"
+                                        android:textColor="#575247"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"/>
 
-                        <!--<android.support.v7.widget.CardView-->
-                            <!--android:layout_width="150dp"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_margin="10dp">-->
+                                </LinearLayout>
 
-                            <!--<LinearLayout-->
-                                <!--android:layout_width="match_parent"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:orientation="vertical"-->
-                                <!--android:gravity="center">-->
+                            </android.support.v7.widget.CardView>
 
-                                <!--<de.hdodenhof.circleimageview.CircleImageView-->
-                                    <!--android:id="@+id/camera_btn"-->
-                                    <!--android:layout_width="96dp"-->
-                                    <!--android:layout_height="96dp"-->
-                                    <!--android:src="@drawable/camera"-->
-                                    <!--app:civ_border_width="2dp"-->
-                                    <!--app:civ_border_color="#FFFFFFFF"-->
-                                    <!--android:layout_alignParentTop="true"-->
-                                    <!--android:layout_alignParentLeft="true"-->
-                                    <!--android:onClick="onClickActionMethod"/>-->
-                                <!--<TextView-->
-                                    <!--android:layout_width="wrap_content"-->
-                                    <!--android:layout_height="wrap_content"-->
-                                    <!--android:text="Use camera to take evidence"-->
-                                    <!--android:gravity="center"/>-->
+                            <android.support.v7.widget.CardView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
 
-                            <!--</LinearLayout>-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
 
-                        <!--</android.support.v7.widget.CardView>-->
+                                    <ImageView
+                                        android:id="@+id/bardem"
+                                        android:layout_width="100dp"
+                                        android:layout_height="80dp"
+                                        android:src="@drawable/bardem"
+                                        android:onClick="berdem"/>
 
-                    <!--</LinearLayout>-->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="BERDEM"
+                                        android:textColor="#575247"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"/>
 
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:id="@+id/cmh"
+                                        android:layout_width="100dp"
+                                        android:layout_height="80dp"
+                                        android:src="@drawable/cmh"
+                                        android:onClick="cmh"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        android:textColor="#575247"
+                                        android:text="CMH"/>
+
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:id="@+id/sir_solimullah"
+                                        android:layout_width="100dp"
+                                        android:layout_height="80dp"
+                                        android:src="@drawable/sir_solimullah"
+                                        android:onClick="ssmc"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        android:textColor="#575247"
+                                        android:text="SSMC"/>
+
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:id="@+id/shohid_shoroardi"
+                                        android:layout_width="100dp"
+                                        android:layout_height="80dp"
+                                        android:src="@drawable/shohid_shorowardy"
+                                        android:onClick="shsmc"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        android:textColor="#575247"
+                                        android:text="ShSMC"/>
+
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
 
                     <LinearLayout
                         android:layout_marginTop="10dp"
-                            android:layout_width="wrap_content"
+                            android:layout_width="230dp"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
+                        android:background="@drawable/button_shape"
                             android:gravity="center">
 
                             <ImageView
-                                android:id="@+id/submit_btn"
+                                android:id="@+id/reportToPolice"
                                 android:layout_width="96dp"
                                 android:layout_height="100dp"
-                                android:src="@drawable/police"
+                                android:src="@drawable/policeman"
                                 android:scaleType="fitCenter"
                                 android:onClick="reportToPolice"/>
                             <TextView
@@ -340,8 +437,9 @@
                                 android:layout_height="wrap_content"
                                 android:text="Report To Police"
                                 android:textSize="25sp"
-                                android:textColor="#575247"
+                                android:textColor="#FFFCDB"
                                 android:textStyle="bold"
+                                android:fontFamily="serif"
                                 android:gravity="center"/>
 
                         </LinearLayout>
@@ -365,6 +463,10 @@
 
 
             </ScrollView>
+
+            <View
+                android:layout_width="200dp"
+                android:layout_height="200dp"/>
 
         </LinearLayout>
 
