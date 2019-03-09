@@ -77,6 +77,7 @@
 
 
     <LinearLayout
+        android:id="@+id/reportTimeLinearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -96,7 +97,7 @@
 
             />
 
-        <TextView
+        <EditText
             android:id="@+id/timeAndDateET"
             android:layout_width="200dp"
             android:layout_height="40dp"
@@ -113,6 +114,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/reportLocationLinearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -149,6 +151,7 @@
     </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/reportPhoneLinearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -186,6 +189,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/reportCrimeTypeLinearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -221,6 +225,7 @@
             </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/reportReportLinearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"

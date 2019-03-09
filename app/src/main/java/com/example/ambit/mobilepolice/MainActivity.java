@@ -15,14 +15,28 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity {
 
     private int CALL_PERMISSION_CODE = 2;
 
     android.support.v7.widget.Toolbar toolbar;
+
+    LinearLayout CradViewLinearLayout, MedicalCardViewLinearLayout;
+
+    CircleImageView call999;
+
+    ImageView reportToPolice;
+    TextView reportToPoliceTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +45,27 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        CradViewLinearLayout = findViewById(R.id.CradViewLinearLayout);
+        Animation defenceCardView  = AnimationUtils.loadAnimation(this, R.anim.bounce);
+        CradViewLinearLayout.startAnimation(defenceCardView);
+
+        MedicalCardViewLinearLayout = findViewById(R.id.MedicalCardViewLinearLayout);
+        Animation medicalCardView  = AnimationUtils.loadAnimation(this, R.anim.bounce);
+        MedicalCardViewLinearLayout.startAnimation(medicalCardView);
+
+
+        call999 = findViewById(R.id.img_selected);
+        Animation call999Anim  = AnimationUtils.loadAnimation(this, R.anim.rotate);
+        call999.startAnimation(call999Anim);
+
+        reportToPolice = findViewById(R.id.reportToPolice);
+        Animation reportToPoliceAnim  = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
+        reportToPolice.startAnimation(reportToPoliceAnim);
+        reportToPoliceTv = findViewById(R.id.reportToPoliceTV);
+        reportToPoliceTv.startAnimation(reportToPoliceAnim);
+
+
     }
 
 
@@ -168,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 })
-                .setNegativeButton("Cencel", new DialogInterface.OnClickListener() {
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.cancel();

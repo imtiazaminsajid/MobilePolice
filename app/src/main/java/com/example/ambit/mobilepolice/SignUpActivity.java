@@ -6,8 +6,11 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +25,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     Button signInButton;
     TextView dontHaveAccount;
 
+    LinearLayout signInEmailLinearLayout, signInPasswordLinearLayout;
+
     private FirebaseAuth mAuth;
 
     private ProgressDialog progressDialog;
@@ -34,6 +39,18 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         signInEmail = findViewById(R.id.signInEmail);
         signInPassword = findViewById(R.id.signInPassword);
         signInButton = findViewById(R.id.signInButton);
+
+        signInEmailLinearLayout =  findViewById(R.id.signInEmailLinearLayout);
+        signInPasswordLinearLayout =  findViewById(R.id.signInPasswordLinearLayout);
+
+        Animation emailAnim  = AnimationUtils.loadAnimation(this, R.anim.lefttoright);
+        signInEmailLinearLayout.startAnimation(emailAnim);
+
+        Animation passAnim  = AnimationUtils.loadAnimation(this, R.anim.righttoleft);
+        signInPasswordLinearLayout.startAnimation(passAnim);
+
+        Animation buttonAnim  = AnimationUtils.loadAnimation(this, R.anim.bounce);
+        signInButton.startAnimation(buttonAnim);
 
         dontHaveAccount = findViewById(R.id.signinDontHaveAccount);
 
@@ -103,7 +120,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         progressDialog.setTitle("Wait");
-        progressDialog.setMessage("Progress on Going");
+        progressDialog.setMessage("SignIn on Going");
         progressDialog.show();
 
         //progressBar.setVisibility(View.VISIBLE);
@@ -113,6 +130,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 //progressBar.setVisibility(View.GONE);
+                progressDialog.dismiss();
 
                 if (task.isSuccessful()){
                     finish();

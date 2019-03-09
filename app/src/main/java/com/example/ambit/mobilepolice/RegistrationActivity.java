@@ -6,9 +6,12 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +32,8 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
     ProgressBar registrationprogressBar;
     private ImageView menuRegistration;
 
+    LinearLayout regNameLinerLayout, regEmailLinerLayout, regPhoneLinerLayout ,regPasswordLinerLayout;
+
     ProgressDialog progressDialog;
 
     private FirebaseAuth mAuth;
@@ -44,6 +49,8 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
         registrationPhone = findViewById(R.id.registrationPhoneId);
 
         registrationButton  = findViewById(R.id.registrationButton);
+        Animation registrationButtonAnim  = AnimationUtils.loadAnimation(this, R.anim.bounce);
+        registrationButton.startAnimation(registrationButtonAnim);
 
         haveAnAccount = findViewById(R.id.registrationHaveAccount);
         registrationprogressBar = findViewById(R.id.registrationProgressBar);
@@ -57,6 +64,22 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
         menuRegistration.setOnClickListener(this);
 
         progressDialog = new ProgressDialog(RegistrationActivity.this);
+
+        regNameLinerLayout = findViewById(R.id.regNameLinerLayout);
+        Animation regNameLinerLayoutAnim  = AnimationUtils.loadAnimation(this, R.anim.lefttoright);
+        regNameLinerLayout.startAnimation(regNameLinerLayoutAnim);
+
+        regEmailLinerLayout = findViewById(R.id.regEmailLinerLayout);
+        Animation regEmailLinerLayoutAnim  = AnimationUtils.loadAnimation(this, R.anim.righttoleft);
+        regEmailLinerLayout.startAnimation(regEmailLinerLayoutAnim);
+
+        regPhoneLinerLayout = findViewById(R.id.regPhoneLinerLayout);
+        Animation regPhoneLinerLayoutAnim  = AnimationUtils.loadAnimation(this, R.anim.lefttoright);
+        regPhoneLinerLayout.startAnimation(regPhoneLinerLayoutAnim);
+
+        regPasswordLinerLayout = findViewById(R.id.regPasswordLinerLayout);
+        Animation regPasswordLinerLayoutAnim  = AnimationUtils.loadAnimation(this, R.anim.righttoleft);
+        regPasswordLinerLayout.startAnimation(regPasswordLinerLayoutAnim);
     }
 
     @Override
@@ -138,7 +161,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
 
 
         progressDialog.setTitle("Wait");
-        progressDialog.setMessage("Progress on Going");
+        progressDialog.setMessage("Registration on Going");
         progressDialog.show();
 
 

@@ -2,6 +2,7 @@ package com.example.ambit.mobilepolice;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -19,10 +20,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -64,7 +68,7 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
     EditText locationNameET,complainET, crimeTypeET;
     EditText phoneNumberET;
     Button submitToPolice;
-    TextView dateAndTimeET;
+    EditText dateAndTimeET;
 
     CardView img_chooser, camera_btn;
 
@@ -79,7 +83,9 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
 
     ProgressBar progressBar;
 
+    ProgressDialog progressDialog;
 
+    LinearLayout reportTimeLinearLayout, reportLocationLinearLayout , reportPhoneLinearLayout , reportCrimeTypeLinearLayout , reportReportLinearLayout;
 
 
     @Override
@@ -93,6 +99,33 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
         complainET = findViewById(R.id.complainET);
         crimeTypeET = findViewById(R.id.crimeTypeET);
 
+
+        reportTimeLinearLayout = findViewById(R.id.reportTimeLinearLayout);
+        Animation reportTimeLinearLayoutAnim  = AnimationUtils.loadAnimation(this, R.anim.lefttoright);
+        reportTimeLinearLayout.startAnimation(reportTimeLinearLayoutAnim);
+
+        reportLocationLinearLayout = findViewById(R.id.reportLocationLinearLayout);
+        Animation reportLocationLinearLayoutAnim  = AnimationUtils.loadAnimation(this, R.anim.righttoleft);
+        reportLocationLinearLayout.startAnimation(reportLocationLinearLayoutAnim);
+
+        reportPhoneLinearLayout = findViewById(R.id.reportPhoneLinearLayout);
+        Animation reportPhoneLinearLayoutAnim  = AnimationUtils.loadAnimation(this, R.anim.lefttoright);
+        reportPhoneLinearLayout.startAnimation(reportPhoneLinearLayoutAnim);
+
+        reportCrimeTypeLinearLayout = findViewById(R.id.reportCrimeTypeLinearLayout);
+        Animation reportCrimeTypeLinearLayoutAnim  = AnimationUtils.loadAnimation(this, R.anim.righttoleft);
+        reportCrimeTypeLinearLayout.startAnimation(reportCrimeTypeLinearLayoutAnim);
+
+        reportReportLinearLayout = findViewById(R.id.reportReportLinearLayout);
+        Animation reportReportLinearLayoutAnim  = AnimationUtils.loadAnimation(this, R.anim.lefttoright);
+        reportReportLinearLayout.startAnimation(reportReportLinearLayoutAnim);
+
+        submitToPolice = findViewById(R.id.submitToPolice);
+        Animation submitToPoliceAnim  = AnimationUtils.loadAnimation(this, R.anim.bounce);
+        submitToPolice.startAnimation(submitToPoliceAnim);
+
+        progressDialog = new ProgressDialog(ReportToPolice.this);
+
         img_chooser = findViewById(R.id.img_chooser);
         //camera_btn = findViewById(R.id.camera_btn);
 
@@ -101,7 +134,6 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
 
         capturePicture = findViewById(R.id.capturePicture);
 
-        submitToPolice = findViewById(R.id.submitToPolice);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Reports");
         storageReference = FirebaseStorage.getInstance().getReference("Uploads");
@@ -254,14 +286,20 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
         StorageReference reference = storageReference.child(System.currentTimeMillis()+"."+getFileExtention(imageUri));
 
 
-        progressBar.setVisibility(View.VISIBLE);
+        //progressBar.setVisibility(View.VISIBLE);
+
+        progressDialog.setTitle("Wait");
+        progressDialog.setMessage("Report is Submeting");
+        progressDialog.show();
 
         reference.putFile(imageUri)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                         // Get a URL to the uploaded content
-                        progressBar.setVisibility(View.GONE);
+
+                        progressDialog.dismiss();
+                        //progressBar.setVisibility(View.GONE);
                         Toast.makeText(getApplicationContext(), "Report Updated Successfully", Toast.LENGTH_SHORT).show();
 
                         Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
@@ -289,7 +327,7 @@ public class ReportToPolice extends AppCompatActivity implements LocationListene
                     @Override
                     public void onFailure(@NonNull Exception exception) {
                         // Handle unsuccessful uploads
-                        Toast.makeText(getApplicationContext(), "Alert Message Updated Failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Report Updated Failed", Toast.LENGTH_SHORT).show();
                     }
                 });
 

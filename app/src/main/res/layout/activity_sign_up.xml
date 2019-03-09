@@ -52,6 +52,7 @@
 
 
     <LinearLayout
+        android:id="@+id/signInEmailLinearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -89,6 +90,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/signInPasswordLinearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
