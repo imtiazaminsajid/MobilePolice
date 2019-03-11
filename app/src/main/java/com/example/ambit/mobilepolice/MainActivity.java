@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -23,6 +24,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
+import java.util.Locale;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,6 +40,13 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView reportToPolice;
     TextView reportToPoliceTv;
+
+    ImageView emergencyCall;
+    TextView emergencyCallTextView;
+
+    CountDownTimer countDownTimer;
+    private long timeLeftInMillisecond = 6000;
+    private boolean timeRunning;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +74,10 @@ public class MainActivity extends AppCompatActivity {
         reportToPolice.startAnimation(reportToPoliceAnim);
         reportToPoliceTv = findViewById(R.id.reportToPoliceTV);
         reportToPoliceTv.startAnimation(reportToPoliceAnim);
+
+
+        emergencyCall = findViewById(R.id.emergencyCall);
+        emergencyCallTextView =findViewById(R.id.emergencyCallText);
 
 
     }
@@ -296,5 +310,105 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void sosButton(View view) {
+
+        starStop();
+    }
+
+//    private void startCountdown() {
+//        countDownTimer = new CountDownTimer(timeLeftInMillisecond, 1000) {
+//            @Override
+//            public void onTick(long millisUntilFinished) {
+//                timeLeftInMillisecond = millisUntilFinished;
+//                updateCountDownText();
+//
+//            }
+//
+//            @Override
+//            public void onFinish() {
+//
+//            }
+//        }.start();
+//    }
+
+//    private void updateCountDownText() {
+//        int seconds = (int) (timeLeftInMillisecond / 1000);
+//
+//        String timeFormet = String.format(Locale.getDefault(), "%02d", seconds);
+//
+//        emergencyCallTextView.setText(timeFormet);
+//    }
+
+    public void starStop() {
+        if (timeRunning){
+            stopTimer();
+        }else {
+            startTimer();
+        }
+    }
+
+    public void stopTimer() {
+        countDownTimer.cancel();
+        timeLeftInMillisecond = 6000;
+        emergencyCallTextView.setText("Press The Button For Call Police");
+        timeRunning = false;
+    }
+
+    public void startTimer() {
+        countDownTimer = new CountDownTimer(timeLeftInMillisecond, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+
+                timeLeftInMillisecond = millisUntilFinished;
+                updateTimer();
+
+            }
+
+            @Override
+            public void onFinish() {
+
+                timeLeftInMillisecond = 1;
+
+                if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED){
+                    String number = "999";
+                    Intent intent = new Intent(Intent.ACTION_CALL);
+                    intent.setData(Uri.parse("tel:" + number));
+                    startActivity(intent);
+                } else {
+                    requestStoragePermission();
+                }
+
+            }
+        }.start();
+        emergencyCallTextView.setText("Press The Button For Cencel Call");
+        timeRunning = true;
+    }
+
+    public void updateTimer() {
+
+        int min = (int) timeLeftInMillisecond / 6000;
+
+        int seconds = (int) timeLeftInMillisecond % 6000 / 1000;
+
+        String timeLeftText;
+
+        timeLeftText = "" + min;
+        timeLeftText += "";
+        if (seconds<10) timeLeftText +="";
+        timeLeftText +=seconds;
+
+
+        emergencyCallTextView.setText(timeLeftText);
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (countDownTimer != null){
+            countDownTimer.cancel();
+        }
     }
 }
