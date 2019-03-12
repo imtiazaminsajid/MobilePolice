@@ -411,4 +411,9 @@ public class MainActivity extends AppCompatActivity {
             countDownTimer.cancel();
         }
     }
+
+    public void nearByPoliceStation(View view) {
+        Intent intent = new Intent(MainActivity.this, NearByPoliceStation.class);
+        startActivity(intent);
+    }
 }

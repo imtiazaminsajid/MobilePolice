@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NearByPoliceStation">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_gravity="center"
+        android:background="#575247"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="Police Station"
+        android:textColor="#FFFCDB"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#FFFCDB"
+        android:padding="10dp">
+
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+            <android.support.v7.widget.CardView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Adabor Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/AdaborPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Badda Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/BaddaPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Banani Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/BananiPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Bangshal Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/BangshalPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Bimanbondor Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/BimanbondorPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Cantonment Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/CantonmentPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Chalkbazar Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/ChalkbazarPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Dakshinkhan Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/DakshinkhanPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Darus-Salam Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/DarusSalamPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Demra Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/DemraPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Dhanmondi Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/DhanmondiPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Gandaria Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/GandariaPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Gulshan Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/GulshanPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Hazaribag Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/HazaribagPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Jatrabari Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/JatrabariPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Kafrul Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/KafrulPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Kalabagan Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/KalabaganPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Kamrangirchar Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/KamrangircharPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Khilgaon Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/KhilgaonPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:backgroundTintMode="screen"
+                >
+                <LinearLayout
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#575247"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#FFFCDB"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Khilkhet Police Station"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/KhilkhetPoliceStation"
+                            android:background="#088"
+                            android:src="@drawable/ic_call_black_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -28,7 +28,8 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".AboutDevelopers" />
-        <activity android:name=".AboutApp"></activity>
+        <activity android:name=".AboutApp" />
+        <activity android:name=".NearByPoliceStation"></activity>
     </application>
 
 </manifest>
