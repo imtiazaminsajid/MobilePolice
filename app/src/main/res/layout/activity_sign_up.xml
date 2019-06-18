@@ -30,7 +30,7 @@
             android:layout_width="0dp"
             android:layout_height="50sp"
             android:layout_weight="4"
-            android:src="@drawable/pocket"
+            android:src="@drawable/mobo_logo_new"
             android:gravity="center_horizontal"
             />
 
